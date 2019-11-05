@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var topRouter = require('./routes/top');
+var thongkeRouter = require('./routes/thongke');
 var donhangRouter = require('./routes/donhang');
 var qlnguoidungRouter = require('./routes/qlnguoidung');
 var suathongtinRouter = require('./routes/suathongtin');
@@ -13,6 +14,7 @@ var themspRouter = require('./routes/themsp');
 var csspRouter = require('./routes/chinhsuaSP');
 var themghRouter = require('./routes/themgh');
 var csghRouter = require('./routes/chinhsuaGH');
+
 
 var app = express();
 
@@ -28,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/banchay', topRouter);
+app.use('/thongke', thongkeRouter);
 app.use('/donhang', donhangRouter);
 app.use('/qlnguoidung', qlnguoidungRouter);
 app.use('/suathongtin', suathongtinRouter);
